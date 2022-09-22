@@ -5,7 +5,6 @@ services:
     ports:
       - "8073:8073"
     volumes:
-      # mount in the config dir for stability between restarts
       - openwebrx-settings:/var/lib/openwebrx
     tmpfs:
       # recommended if you're using an SSD
