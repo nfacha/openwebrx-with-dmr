@@ -1,0 +1,20 @@
+version: "3.7"
+services:
+  openwebrx:
+    image: jketterl/openwebrx-full:stable
+    ports:
+      - "8073:8073"
+    volumes:
+      # mount in the config dir for stability between restarts
+      - openwebrx-settings:/var/lib/openwebrx
+    tmpfs:
+      # recommended if you're using an SSD
+      - /tmp/openwebrx
+  codecserver:
+    build:
+      context: codecserver-mbelib-docker
+    ports:
+      - "1073:1073"
+volumes:
+  openwebrx-settings:
+    name: openwebrx-settings
