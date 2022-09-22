@@ -2,6 +2,7 @@ version: "3.7"
 services:
   openwebrx:
     image: jketterl/openwebrx-full:stable
+    restart: unless-stopped
     ports:
       - "8073:8073"
     volumes:
@@ -12,6 +13,7 @@ services:
   codecserver:
     build:
       context: codecserver-mbelib-docker
+    restart: unless-stopped
     ports:
       - "1073:1073"
 volumes:
