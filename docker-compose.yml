@@ -10,6 +10,8 @@ services:
     tmpfs:
       # recommended if you're using an SSD
       - /tmp/openwebrx
+    devices:
+      - /dev/bus/usb
   codecserver:
     build:
       context: codecserver-mbelib-docker
