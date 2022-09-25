@@ -6,7 +6,7 @@ services:
     ports:
       - "8073:8073"
     volumes:
-      - openwebrx-settings:/var/lib/openwebrx
+      - /openwebrx-settings:/var/lib/openwebrx
     tmpfs:
       # recommended if you're using an SSD
       - /tmp/openwebrx
@@ -16,6 +16,3 @@ services:
     restart: unless-stopped
     ports:
       - "1073:1073"
-volumes:
-  openwebrx-settings:
-    name: openwebrx-settings
