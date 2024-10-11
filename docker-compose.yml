@@ -1,7 +1,7 @@
 version: "3.7"
 services:
   openwebrx:
-    image: jketterl/openwebrx-full:stable
+    image: slechev/openwebrxplus:1.2.70
     restart: unless-stopped
     ports:
       - "8073:8073"
